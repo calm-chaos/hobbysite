@@ -27,7 +27,7 @@ class Product(models.Model):
         return "{}".format(self.name)
 
     def get_absolute_url(self):
-        return reverse("merchstore:product", args=[self.pk])
+        return reverse("merchstore:product-detail", args=[self.pk])
 
     class Meta:
         ordering = ["name"]
