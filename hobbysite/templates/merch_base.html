@@ -12,6 +12,13 @@
             > Merch Store </a>
         </h1>
     </header>
+    
         {% block content %} {% endblock %}
+
+        <form method="POST" action="{% url 'logout' %}">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">LOGOUT</button>
+        </form>
 </body>
 </html>
