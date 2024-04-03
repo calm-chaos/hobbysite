@@ -1,0 +1,13 @@
+{% extends "wiki_base.html" %}
+{% block title %} {{ object.title }} {% endblock %}
+{% block content %}
+<body>
+    <h1> {{ object.title}} </h1>
+
+    <h3><b>Category: </b>{{ object.category}}</h3>
+    <h3 style="text-indent: 25px;"> {{ object.entry }}</h3>
+    <p><b>Created on: </b>{{ object.created_on }}</p>
+    <p><b>Updated on: </b>{{ object.updated_on }}</p>
+</body>
+
+{% endblock %}
