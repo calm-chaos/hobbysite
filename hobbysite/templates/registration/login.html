@@ -4,6 +4,7 @@
     </head>
     <body>
         <h1>LOGIN</h1>
+        <a href = "{% url 'password_reset' %}">Forget Password</a>
 
         <form method = "POST">
             {% csrf_token%}
