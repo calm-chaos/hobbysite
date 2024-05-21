@@ -1,13 +1,18 @@
 {% extends "wiki_base.html" %}
 {% block content %}
-<h2>
-    <ul>
+<ul>
+    {% if user.is_authenticated %}
+        <form method = "POST" action="{% url 'logout' %}">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type = "submit">LOGOUT</button>
+        </form>
+    {% endif %}
         {% for article in object_list %}
         <li>
             <a href = "{{ article.get_absolute_url }}"> {{ article.title }}</a>
         </li>
         {% endfor %}
-    </ul>
-</h2>
+</ul>
 
 {% endblock %}
