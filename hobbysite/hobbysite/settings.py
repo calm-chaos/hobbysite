@@ -121,7 +121,6 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 LOGIN_REDIRECT_URL = "commissions/list"
-LOGOUT_REDIRECT_URL = "/commissions/list"
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
 # Default primary key field type
