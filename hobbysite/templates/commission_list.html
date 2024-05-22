@@ -4,6 +4,7 @@
     {% if user.is_authenticated %}
         <form method = "POST" action="{% url 'logout' %}">
             {% csrf_token %}
+            <input type="hidden" name="next" value="{{ request.path }}">
             <button type="submit">LOGOUT</button>
         </form>
     {% endif %}
