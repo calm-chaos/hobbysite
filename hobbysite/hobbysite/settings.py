@@ -121,7 +121,6 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 LOGIN_REDIRECT_URL = "/forum/threads"
-LOGOUT_REDIRECT_URL = "/forum/threads"
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
 
