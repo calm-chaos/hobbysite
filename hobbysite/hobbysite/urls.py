@@ -21,4 +21,8 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("accounts/", include("django.contrib.auth.urls")),
     path("commissions/", include("commissions.urls", namespace="commissions")),
+    path("forum/", include("forum.urls", namespace="forum")),
+    path("blog/", include("blog.urls", namespace="blog")),
+    path("wiki/", include("wiki.urls", namespace="wiki")),
+    path("merchstore/", include("merchstore.urls", namespace="merchstore")),
 ]

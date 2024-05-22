@@ -41,6 +41,10 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "commissions",
+    "forum",
+    "blog",
+    "wiki",
+    "merchstore",
 ]
 
 MIDDLEWARE = [
@@ -109,7 +113,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = "en-us"
 
-TIME_ZONE = "UTC"
+TIME_ZONE = "Asia/Manila"
 
 USE_I18N = True
 
@@ -121,6 +125,10 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 LOGIN_REDIRECT_URL = "commissions/list"
+LOGIN_REDIRECT_URL = "/forum/threads"
+LOGIN_REDIRECT_URL = "/blog/articles"
+LOGIN_REDIRECT_URL = "/wiki/articles"
+LOGIN_REDIRECT_URL = "/merchstore/items"
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
 # Default primary key field type
