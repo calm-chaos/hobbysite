@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-  
+    "forum",
     "blog",
     "wiki",
     "merchstore",
@@ -123,7 +123,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = "static/"
-
+LOGIN_REDIRECT_URL = "/forum/threads"
 LOGIN_REDIRECT_URL = "/blog/articles"
 LOGIN_REDIRECT_URL = "/wiki/articles"
 LOGIN_REDIRECT_URL = "/merchstore/items"
