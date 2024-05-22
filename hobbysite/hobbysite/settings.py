@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "wiki",
     "merchstore",
-  
 ]
 
 MIDDLEWARE = [
@@ -123,9 +122,7 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 LOGIN_REDIRECT_URL = "/wiki/articles"
-LOGOUT_REDIRECT_URL = "/wiki/articles"
 LOGIN_REDIRECT_URL = "/merchstore/items"
-LOGOUT_REDIRECT_URL = "/merchstore/items"
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
 # Default primary key field type
