@@ -121,7 +121,6 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 LOGIN_REDIRECT_URL = "/blog/articles"
-LOGOUT_REDIRECT_URL = "/blog/articles"
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
 # Default primary key field type
