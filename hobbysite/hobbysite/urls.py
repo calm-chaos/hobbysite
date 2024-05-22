@@ -21,7 +21,8 @@ from django.conf import settings
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("accounts/", include("django.contrib.auth.urls")),
+
+    path("blog/", include("blog.urls", namespace="blog")),
     path("wiki/", include("wiki.urls", namespace="wiki")),
     path("merchstore/", include("merchstore.urls", namespace="merchstore")),
-
 ]
