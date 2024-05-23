@@ -9,6 +9,7 @@
                 <button type = "submit">LOGOUT</button>
             </form>
         {% endif %}
+        <br>
         {% for product in object_list %}
         <li> <a href="{{ product.get_absolute_url }}"> {{ product.name }}</a>
         </li>
