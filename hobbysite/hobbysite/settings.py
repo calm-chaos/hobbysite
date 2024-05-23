@@ -124,6 +124,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = "static/"
+STATICFILES_DIRS = [BASE_DIR / "static"]
 LOGIN_REDIRECT_URL = "commissions/list"
 LOGIN_REDIRECT_URL = "/forum/threads"
 LOGIN_REDIRECT_URL = "/blog/articles"
