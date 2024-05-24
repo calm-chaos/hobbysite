@@ -7,9 +7,9 @@ from .models import Product
 
 class MerchListView(ListView):
     model = Product
-    template_name = "product_list.html"
+    template_name = "merchstore/product_list.html"
 
 
 class MerchDetailView(LoginRequiredMixin, DetailView):
     model = Product
-    template_name = "product_detail.html"
+    template_name = "merchstore/product_detail.html"
