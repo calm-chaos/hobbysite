@@ -8,9 +8,9 @@ from .models import *
 
 class BlogListView(ListView):
     model = Article
-    template_name = "blog_list.html"
+    template_name = "blog/blog_list.html"
 
 
 class BlogDetailView(LoginRequiredMixin, DetailView):
     model = Article
-    template_name = "blog_detail.html"
+    template_name = "blog/blog_detail.html"
