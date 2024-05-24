@@ -1,0 +1,48 @@
+{% load static %}
+<html>
+    <head>
+        <title>
+            {% block title %} {% endblock %}
+        </title>
+        <link rel="stylesheet" href="{% static 'css/main.css' %}">
+        {% block style %} {% endblock %}
+        <style>
+            nav ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                background-color: rgb(137, 180, 220);
+                overflow: hidden;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <center>
+                <h1>ヘ(^_^ヘ) ヘ(^o^ヘ) | ( ノ ^o^)ノ ( ノ・・)ノ</h1>
+            </center>
+        </header>
+        <p class="navbar" id="navbar">
+            <a href="{% url 'home' %}" class="btn {% if 'home' in request.resolver_match.view_name %} actvie {% endif %}">Dashboard</a>
+            <a href="{% url 'merchstore:products' %}" class="btn {% if 'merchstore' in request.resolver_match.view_name %} actvie {% endif %}">Merchstore</a>
+        </p>
+        <nav>
+            <ul>
+                <!-- <li><a class="active" href="../../home">Home</a></li> -->
+                <!-- <li><a href="../../merchstore/items">Merchstore</a></li> -->
+                <li><a href="../../wiki/articles">Wiki</a></li>
+                <li><a href="../../blog/articles">Blog</a></li>
+                <li><a href="../../forum/threads">Forum</a></li>
+                <li><a href="../../commissions/list">Commissions</a></li>
+            </ul>
+        </nav>
+        <div id="content">
+            {% block content %} {% endblock %}
+        </div>
+
+        {% block script %} {% endblock %}
+
+        <h1>House</h1>
+        Nothing to see here...yet.
+    </body>
+</html>
