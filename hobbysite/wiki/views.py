@@ -7,9 +7,9 @@ from .models import Article
 
 class WikiListView(ListView):
     model = Article
-    template_name = "wiki_list.html"
+    template_name = "wiki/wiki_list.html"
 
 
 class WikiDetailView(LoginRequiredMixin, DetailView):
     model = Article
-    template_name = "wiki_detail.html"
+    template_name = "wiki/wiki_detail.html"
