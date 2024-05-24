@@ -7,9 +7,9 @@ from .models import *
 
 class CommissionListView(ListView):
     model = Commission
-    template_name = "commission_list.html"
+    template_name = "commissions/commission_list.html"
 
 
 class CommissionDetailView(LoginRequiredMixin, DetailView):
     model = Commission
-    template_name = "commission_detail.html"
+    template_name = "commissions/commission_detail.html"
