@@ -7,9 +7,9 @@ from .models import *
 
 class ForumListView(ListView):
     model = Post
-    template_name = "forum_list.html"
+    template_name = "forum/forum_list.html"
 
 
 class ForumDetailView(LoginRequiredMixin, DetailView):
     model = Post
-    template_name = "forum_detail.html"
+    template_name = "forum/forum_detail.html"
